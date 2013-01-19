@@ -1,0 +1,16 @@
+#!/bin/bash
+#=============================================================================
+#     FileName: CSCOPE
+#         Desc: 
+#       Author: Lee Meng
+#        Email: leaveboy@gmail.com
+#     HomePage: http://leaveboy.is-programmer.com/
+#      Version: 0.0.1
+#   LastChange: 2013-01-09 16:10:49
+#      History:
+#=============================================================================
+find . -name "*.h" -o -name "*.c" -o -name "*.cc" -o -name "*.csp" > cscope.files
+cscope -bkq -i cscope.files
+ctags -R --c-kinds=+p --fields=+iaS  --extra=+q #/usr/include/
+#ctags -R --c++-kinds=+p --fields=+iaS --extra=+q /usr/include/c++/4.4.3/
+#cscope add ./cscope.out
