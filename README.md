@@ -7,13 +7,13 @@
 ========
 ======
 
-*CSCOPE     #当前只加入了对`.c .cpp .csp .h `的支持，如需特别加入支持，请在`CSCOPE`中添加
-*GVIM_CMP   #选中两个文件进行对比
-*GVIM_LEFT  #选为左侧对比
-*GVIM_RIGHT #与左侧进行对比
-*install   #安装程序
-*vimrc     #vim 脚本
-*.vim      #vim 插件 加入c代码补全功能，函数补全功能，`Tlist dirlist supertab`等等
+* CSCOPE     #当前只加入了对`.c .cpp .csp .h `的支持，如需特别加入支持，请在`CSCOPE`中添加
+* GVIM_CMP   #选中两个文件进行对比
+* GVIM_LEFT  #选为左侧对比
+* GVIM_RIGHT #与左侧进行对比
+* install   #安装程序
+* vimrc     #vim 脚本
+* .vim      #vim 插件 加入c代码补全功能，函数补全功能，`Tlist dirlist supertab`等等
 
 安装：
 ========
