@@ -321,7 +321,7 @@ let g:vimrc_email='leaveboy@gmail.com'
 let g:vimrc_homepage='http://leaveboy.is-programmer.com/' 
 nmap <F8> :AuthorInfoDetect<cr> 
 iab xname <c-r>qicheng.meng<c-i>
-iab xdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<c-i>
+iab xdate <c-r>=strftime("%c")<c-i>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings etc.
@@ -445,9 +445,9 @@ set fdl=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python script
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set softtabstop=2
-set tabstop=4
+set tabstop=2
 set backspace=2
 set smarttab
 set lbr
@@ -536,7 +536,7 @@ let NERDTreeWinPos = "left"
 map <F4> :NERDTreeToggle<cr>
 "}
 
-map <F6> :r !env LANG=en_US.UTF-8 date<c-i>
+map <F6> :r !env LANG=en_US.UTF-8 date<cr>
 
 """"""""""""""""""""""""""""""
 " => LaTeX Suite thing
@@ -697,18 +697,6 @@ autocmd FileType python :call <SID>abbrev_python()
 augroup END
 endif
 
-"vimwiki
-"auto_export out html
-"let g:vimwiki_list = [{'path' : '/home/lm/document/vimwiki/',
-			"\'template_path' : '/home/lm/document/vimwiki/template/',
-			"\'template_default' : 'default_template',
-			"\'html_header': '~/document/vimwiki/template/header.tpl',
-			"\'html_footer': '~/document/vimwiki/template/footer.tpl',
-			"\'template_ext' : '.html',
-			"\'path_html': '/home/lm/document/vimwiki/html/',
-			"\'auto_export': 0,
-			"\'nested_syntaxes': {'Clang': 'c', 'C++': 'cpp', 'Lisp': 'lisp', 'Ruby': 'ruby', 'SQL': 'sql', 'Bash': 'sh', 'Vim': 'vim', 'Make': 'make', 'CMake': 'cmake', 'JS': 'javascript', 'CSS': 'css', 'HTML': 'html', 'XML': 'xml'},}]
-
 let wiki = {}
 let wiki.path             = '~/document/vimwiki'
 let wiki.path_html        = '/var/www/'
@@ -735,7 +723,6 @@ let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1,red,cen
 let g:vimwiki_menu = ''
 "let g:vimwiki_valid_html_tags='b,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
 
-cs add ./cscope.out
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => MISC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -754,10 +741,18 @@ set nocp " non vi compatible mode
 
 "powerline{
 set guifont=Monaco\ for\ Powerline
+"set guifont=Inconsolata\ dz\ Powerline
+"set guifont=Bitstream\ Vera\ Sans\ Mono
 "set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
+let g:SuperTabDefaultCompletionType = "context"
+let g:syntastic_mode_map = { 'mode': 'passive' }
+"}
+
+"ag{
+let g:agprg="<custom-ag-path-goes-here> -H --nocolor --nogroup --column"
 "}
 
 "autocmd InsertLeave * if pumvisible() == 0|pclose|endif
@@ -769,5 +764,9 @@ let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
 let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
 let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included file
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
+
+" cscope {
 " map <ctrl>+F12 to generate ctags for current folder:
+cs add ./cscope.out
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q <CR><CR>
+" }
