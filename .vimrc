@@ -1,11 +1,11 @@
 "=============================================================================
 "     FileName: .vimrc
-"         Desc: vimrc
+"         Desc: 
 "       Author: Lee Meng
 "        Email: leemeng0x61@gmail.com
-"     HomePage: http://leaveboy.github.io/
+"     HomePage: http://leemeng0x61.github.io/
 "      Version: 0.0.1
-"   LastChange: 2013-05-26 21:32:04
+"   LastChange: 2013-06-04 16:14:14
 "      History:
 "=============================================================================
 " => General
@@ -347,7 +347,7 @@ endif
 "My information
 let g:vimrc_author='Lee Meng'
 let g:vimrc_email='leemeng0x61@gmail.com'
-let g:vimrc_homepage='http://leaveboy.github.io/' 
+let g:vimrc_homepage='http://leemeng0x61.github.io/' 
 nmap <F8> :AuthorInfoDetect<cr> 
 iab xname <c-r> qicheng.meng<c-i>
 iab xdate <c-r>=strftime("%c")<c-i>
@@ -694,12 +694,12 @@ ino <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
 set nocp " non vi compatible mode
 
 "powerline{
-"set guifont=Monaco\ for\ Powerline
-"set nocompatible
-"set t_Co=256
-"let g:Powerline_symbols = 'fancy'
-"let g:SuperTabDefaultCompletionType = "context"
-"let g:syntastic_mode_map = { 'mode': 'passive' }
+set guifont=Monaco\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+let g:SuperTabDefaultCompletionType = "context"
+let g:syntastic_mode_map = { 'mode': 'passive' }
 "}
 
 "ag{
