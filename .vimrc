@@ -30,10 +30,11 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'hallison/vim-markdown'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'rking/ag.vim'
 " vim-scripts repos
 Bundle 'taglist.vim'
 Bundle 'vimwiki'
-Bundle 'ag.vim'
+"Bundle 'ag.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'SuperTab-continued.'
 Bundle 'AuthorInfo'
@@ -703,7 +704,7 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 "}
 
 "ag{
-let g:agprg="<custom-ag-path-goes-here> -H --nocolor --nogroup --column"
+"let g:agprg="/usr/bin/ag --column"
 "}
 
 "autocmd InsertLeave * if pumvisible() == 0|pclose|endif
