@@ -31,6 +31,7 @@ Bundle 'gmarik/vundle'
 Bundle 'hallison/vim-markdown'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'rking/ag.vim'
+Bundle 'terryma/vim-multiple-cursors'
 " vim-scripts repos
 Bundle 'taglist.vim'
 Bundle 'vimwiki'
@@ -475,11 +476,12 @@ set fdl=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python script
 set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set backspace=2
 set smarttab
+set autoindent
 set lbr
 "set tw=500
 
